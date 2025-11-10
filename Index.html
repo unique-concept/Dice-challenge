@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Dashboard</title>
+    <!-- Use Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font from Google Fonts for a clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN for clean, modern icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom styles for animations or specific overrides can go here */
+        .icon {
+            stroke-width: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen p-6 md:p-10">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Dashboard Header -->
+        <header class="mb-8 md:mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-100 flex items-center">
+                <span class="mr-2" data-lucide="monitor"></span>
+                Company Sales Dashboard
+            </h1>
+            <p class="text-gray-400 mt-2">Real-time insights on your technology sales performance.</p>
+        </header>
+
+        <!-- Main Grid Container for Widgets -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Widget: Total Sales -->
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-200">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Total Revenue (YTD)</h2>
+                    <span data-lucide="dollar-sign" class="text-green-500 icon"></span>
+                </div>
+                <p class="text-3xl sm:text-4xl font-extrabold text-green-400 mt-4">$2,560,000</p>
+                <p class="text-sm text-gray-500 mt-1">+12% from last year</p>
+            </div>
+
+            <!-- Widget: Laptops Sold -->
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-200">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Laptops Sold</h2>
+                    <span data-lucide="laptop" class="text-purple-500 icon"></span>
+                </div>
+                <p class="text-3xl sm:text-4xl font-extrabold text-purple-400 mt-4">1,250</p>
+                <p class="text-sm text-gray-500 mt-1">Goal: 2,000</p>
+            </div>
+
+            <!-- Widget: Current Inventory -->
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-200">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Current Inventory</h2>
+                    <span data-lucide="box" class="text-indigo-500 icon"></span>
+                </div>
+                <p class="text-3xl sm:text-4xl font-extrabold text-indigo-400 mt-4">480 units</p>
+                <p class="text-sm text-gray-500 mt-1">Across all products</p>
+            </div>
+
+            <!-- Widget: Top Selling Product -->
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-200">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Top Selling Product</h2>
+                    <span data-lucide="award" class="text-yellow-500 icon"></span>
+                </div>
+                <div class="flex items-center mt-4">
+                    <img src="https://placehold.co/80x80/292524/6b7280?text=ZenithPro" alt="ZenithPro Laptop" class="w-16 h-16 object-cover rounded-lg mr-4">
+                    <div>
+                        <p class="text-lg font-bold">ZenithPro Laptop</p>
+                        <p class="text-sm text-gray-500">Sold: 350 units</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Widget: Customer Satisfaction -->
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-200">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Customer Satisfaction</h2>
+                    <span data-lucide="smile" class="text-cyan-500 icon"></span>
+                </div>
+                <p class="text-3xl sm:text-4xl font-extrabold text-cyan-400 mt-4">4.8 / 5.0</p>
+                <p class="text-sm text-gray-500 mt-1">Based on 1,200 reviews</p>
+            </div>
+
+            <!-- Widget: Pending Orders -->
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-6 transition-transform hover:scale-105 duration-200">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Pending Orders</h2>
+                    <span data-lucide="receipt" class="text-orange-500 icon"></span>
+                </div>
+                <p class="text-3xl sm:text-4xl font-extrabold text-orange-400 mt-4">15</p>
+                <p class="text-sm text-gray-500 mt-1">Total pending for fulfillment</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
